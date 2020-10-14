@@ -72,14 +72,14 @@
 $('.accordion').on('click',function(){
     if($(this).hasClass("active")){
         $(this).removeClass('active');
-        $(this).next().css({"display":"none"});
+        $(this).next().slideUp();
     }else{
         // $('.accordion').removeClass('active')
         $(this).parent().find('.accordion').removeClass('active');
         $(this).addClass('active');
-        $(this).parent().find('.panel').css({"display":"none"});
+        $(this).parent().find('.panel').slideUp();
         // $('.panel').css({"display":"none"});
-        $(this).next().css({"display":"block"});
+        $(this).next().slideDown();
     }
 
 })
